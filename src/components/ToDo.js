@@ -41,7 +41,11 @@ class ToDo extends React.Component{
                 ToDo App
                 <input type="text" value={this.state.inputValue} onChange={this.inputHandler.bind(this)}/>
                 <button onClick={this.addItem.bind(this)}>Dodaj do listy</button>
-                {elements}
+                {elements.map((element) => (
+                    <div>
+                        {element}
+                    </div>
+                ))}
             </div>
         )
     }
